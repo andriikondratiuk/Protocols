@@ -5,16 +5,15 @@ namespace TestConnections.Protocols
 {
     class AzureBlobStorage : BaseProtocol
     {
-        public AzureBlobStorage(string host) : base(host)
+        public AzureBlobStorage(string host)
+            : base(host, SchemasName.https)
         {
-            _schema = SchemasName.https;
         }
 
         public override string GetConnectionStr()
         {
-            var str = $"{_schema}://";
-            str += _host;
-            str += UrlPath?.Insert(0, "/");
+            var str = $"{Schema}://" + _host + UrlPath?.Insert(0, "/");
+
             return str;
         }
     }

@@ -4,15 +4,14 @@ namespace TestConnections.Protocols
 {
     public class WebDav : BaseProtocol
     {
-        public WebDav(string host) : base(host)
-        {            
+        public WebDav(string host) : base(host, SchemasName.WebDav)
+        {
         }
 
         public override string GetConnectionStr()
         {
-            var str = $"{_schema}://";
-            str += _host;
-            str += UrlPath?.Insert(0, "/");
+            var str = $"{Schema}://" + _host + UrlPath?.Insert(0, "/");
+
             return str;
         }
     }

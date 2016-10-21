@@ -6,15 +6,15 @@ namespace TestConnections.Protocols
 {
     public class AmazonS3 : BaseProtocol
     {
-        public AmazonS3(string host) : base(host)
+        public AmazonS3(string host)
+            : base(host, SchemasName.S3)
         {
         }
 
         public override string GetConnectionStr()
         {
-            var str = $"{_schema}://";
-            str += _host;
-            str += UrlPath?.Insert(0, "/");
+            var str = $"{Schema}://" + _host + UrlPath?.Insert(0, "/");
+
             return str;
         }
     }

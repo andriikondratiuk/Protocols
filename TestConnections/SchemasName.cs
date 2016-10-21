@@ -3,10 +3,11 @@ namespace TestConnections.Protocols
 {
     public enum SchemasName
     {
-        ftp,
-        ssh,
+        FTP,
+        SSH,
         http,
         https,
-        s3
+        S3,
+        WebDav
     }
 }
