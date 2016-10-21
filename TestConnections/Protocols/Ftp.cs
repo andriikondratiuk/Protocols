@@ -25,5 +25,10 @@ namespace TestConnections.Protocols
 
             return str;
         }
+
+        public static Ftp Load(string path)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
