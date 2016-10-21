@@ -33,6 +33,21 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Configuration\Azure.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Configuration\WebDav.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Configuration\SSH.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Configuration\FTP.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Configuration\S3.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -43,6 +58,8 @@
     <Compile Include="SchemasName.cs" />
     <Compile Include="Protocols\Ssh.cs" />
     <Compile Include="Protocols\WebDav.cs" />
+    <Compile Include="Storage.cs" />
+    <Compile Include="Uploaders\BaseUploader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
